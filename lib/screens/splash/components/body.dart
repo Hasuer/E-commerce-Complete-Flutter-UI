@@ -1,8 +1,12 @@
-import 'package:e_commerce_app_ui/components/default_button.dart';
-import 'package:e_commerce_app_ui/constants.dart';
-import 'package:e_commerce_app_ui/screens/splash/components/splash_content.dart';
-import 'package:e_commerce_app_ui/size_config.dart';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../../components/default_button.dart';
+import '../../../constants.dart';
+import '../../../routes.dart';
+import '../../../size_config.dart';
+import 'splash_content.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -58,7 +62,9 @@ class _BodyState extends State<Body> {
                     const Spacer(
                       flex: 3,
                     ),
-                    DefaultButton(text: "Continue", press: () {}),
+                    DefaultButton(
+                        text: "Continue",
+                        press: () => Get.toNamed(Routes.signInScreen)),
                     const Spacer(),
                   ],
                 ),

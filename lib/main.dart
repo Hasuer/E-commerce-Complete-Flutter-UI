@@ -1,7 +1,7 @@
-import 'package:e_commerce_app_ui/constants.dart';
 import 'package:e_commerce_app_ui/routes.dart';
+import 'package:e_commerce_app_ui/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,18 +16,13 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        // scaffoldBackgroundColor: Colors.white
-        fontFamily: "Muli",
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(color: kTextColor),
-          bodyText2: TextStyle(color: kTextColor),
-        ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: theme(),
       // home: const SplashScreen(),
       initialRoute: Routes.splashScreen,
       getPages: AppPages.pages,
+      defaultTransition: Transition.fade,
     );
   }
+
+  
 }

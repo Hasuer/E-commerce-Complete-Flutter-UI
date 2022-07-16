@@ -1,6 +1,7 @@
-import 'package:e_commerce_app_ui/constants.dart';
+
 import "package:flutter/material.dart";
 
+import '../../../constants.dart';
 import '../../../size_config.dart';
 
 
