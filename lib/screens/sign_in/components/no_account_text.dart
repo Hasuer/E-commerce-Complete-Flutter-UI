@@ -1,4 +1,6 @@
+import 'package:e_commerce_app_ui/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../constants.dart';
 
@@ -9,11 +11,18 @@ class NoAccountText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text.rich(TextSpan(
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TextSpan(text: "Dont have an account?"),
-        TextSpan(text: " Sign up!", style: TextStyle(color: kPrimaryColor)),
+        const Text("Dont have an account?"),
+        GestureDetector(
+          onTap: () => Get.toNamed(Routes.signUpScreen),
+          child: const Text(
+            " Sign up!",
+            style: TextStyle(color: kPrimaryColor),
+          ),
+        ),
       ],
-    ));
+    );
   }
 }
