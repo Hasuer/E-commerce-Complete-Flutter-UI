@@ -1,4 +1,6 @@
+import 'package:e_commerce_app_ui/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../models/Product.dart';
 import '../../../size_config.dart';
@@ -26,7 +28,9 @@ class PopularProducts extends StatelessWidget {
                 aspectRatio: 1.02,
                 width: 140,
                 product: demoProducts[index],
-                press: () {},
+                likeBtnPress: () {},
+                productPress: () => Get.toNamed(Routes.detailScreen,
+                    arguments: demoProducts[index]),
               ),
             ),
           ),

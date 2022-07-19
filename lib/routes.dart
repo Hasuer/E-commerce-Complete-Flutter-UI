@@ -7,6 +7,7 @@ import 'package:e_commerce_app_ui/screens/splash/splash_screen.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import 'screens/complete_profile/complete_profile_screen.dart';
+import 'screens/detail/detail_screen.dart';
 import 'screens/home/home_screen.dart';
 import 'screens/otp/otp_screen.dart';
 
@@ -19,6 +20,7 @@ class Routes{
   static const completeProfileScreen = '/completeProfileScreen';
   static const otpScreen = '/otpScreen';
   static const homeScreen = '/homeScreen';
+  static const detailScreen = '/detailScreen';
 }
 
 class AppPages{
@@ -54,6 +56,10 @@ class AppPages{
     GetPage(
       name: Routes.homeScreen,
       page: () => const HomeScreen(),
+    ),
+    GetPage(
+      name: Routes.detailScreen,
+      page: () => const DetailScreen(),
     ),
   ];
 }
