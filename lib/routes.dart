@@ -6,6 +6,7 @@ import 'package:e_commerce_app_ui/screens/sign_up/sign_up_screen.dart';
 import 'package:e_commerce_app_ui/screens/splash/splash_screen.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
+import 'screens/cart/cart_screen.dart';
 import 'screens/complete_profile/complete_profile_screen.dart';
 import 'screens/detail/detail_screen.dart';
 import 'screens/home/home_screen.dart';
@@ -21,6 +22,7 @@ class Routes{
   static const otpScreen = '/otpScreen';
   static const homeScreen = '/homeScreen';
   static const detailScreen = '/detailScreen';
+  static const cartScreen = '/cartScreen';
 }
 
 class AppPages{
@@ -60,6 +62,10 @@ class AppPages{
     GetPage(
       name: Routes.detailScreen,
       page: () => const DetailScreen(),
+    ),
+    GetPage(
+      name: Routes.cartScreen,
+      page: () => const CartScreen(),
     ),
   ];
 }
