@@ -23,6 +23,4 @@ class MyApp extends StatelessWidget {
       defaultTransition: Transition.fade,
     );
   }
-
-  
 }

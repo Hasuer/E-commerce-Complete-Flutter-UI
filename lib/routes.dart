@@ -11,6 +11,7 @@ import 'screens/complete_profile/complete_profile_screen.dart';
 import 'screens/detail/detail_screen.dart';
 import 'screens/home/home_screen.dart';
 import 'screens/otp/otp_screen.dart';
+import 'screens/profile/profile_screen.dart';
 
 class Routes{
   static const splashScreen = '/spalshScreen';
@@ -23,6 +24,7 @@ class Routes{
   static const homeScreen = '/homeScreen';
   static const detailScreen = '/detailScreen';
   static const cartScreen = '/cartScreen';
+  static const profileScreen = '/profileScreen';
 }
 
 class AppPages{
@@ -66,6 +68,10 @@ class AppPages{
     GetPage(
       name: Routes.cartScreen,
       page: () => const CartScreen(),
+    ),
+    GetPage(
+      name: Routes.profileScreen,
+      page: () => const ProfileScreen(),
     ),
   ];
 }
